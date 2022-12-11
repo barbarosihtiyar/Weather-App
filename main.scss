@@ -1,0 +1,15 @@
+@import "variables";
+
+body{
+    font-size: 10px;
+}
+
+.weather-app {
+    header {
+        h1 {
+            color: $beige;
+            text-align: center;
+            font-size: 3.5rem;
+        }
+    }
+}
