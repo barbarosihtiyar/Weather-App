@@ -6,4 +6,34 @@ body {
   color: #EAE3D2;
   text-align: center;
   font-size: 3.5rem;
+}
+.weather-app .weather {
+  display: flex;
+  gap: 5%;
+}
+.weather-app .weather .weatherimage .none {
+  display: none;
+}
+.weather-app .weather .weatherinfo input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #F9F5EB;
+  border-bottom: 1px solid #F9F5EB;
+  padding-bottom: 2%;
+  font-size: 1.3rem;
+}
+.weather-app .weather .weatherinfo button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.3rem;
+}
+.weather-app .weather .weatherinfo ::-moz-placeholder {
+  color: #EAE3D2;
+}
+.weather-app .weather .weatherinfo :-ms-input-placeholder {
+  color: #EAE3D2;
+}
+.weather-app .weather .weatherinfo ::placeholder {
+  color: #EAE3D2;
 }/*# sourceMappingURL=main.css.map */
