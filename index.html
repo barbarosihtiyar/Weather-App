@@ -12,28 +12,107 @@
     <title>WEATHER APP</title>
 </head>
 
-<body style="background-image: url(./image/weather.jpg); background-repeat: no-repeat; background-size: cover;">
-
-    <div class="weather-app">
-        <header>
-            <h1>WELCOME TO WHEATHER APP</h1>
-        </header>
-        <div class="weather">
-            <div class="weatherimage">
-                <img width="500px" class="block " src="./image/sun.jpg">
-                <img width="500px" class="block none" src="./image/cloudy.jpg">
-                <img width="500px" class="block none" src="./image/rainy.jpg">
-                <img width="500px" class="block none" src="./image/snow.jpg">
+<body>
+    <div class="weather-app column">
+        <form>
+            <input id="weatherinput" placeholder="Enter the location..">
+            <button type="submit" id="submit" style="cursor: pointer;"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <div class="weather-cart">
+            <div class="cart-header">
+            <span class="cartTextColor cityBorder" id="mainCity">Istanbul</span>
+            <span class="cartTextColor cartClock" id="mainCityClock">10:00</span>
+        </div>
+        <div class="cart-image">
+            <span class="cartImage" id="mainImageIcon"><i class="fa-sharp fa-solid fa-sun"></i></span>
+            <span class="cartImageText" id="mainDesc">Sun</span>
+        </div>
+        <div class="cart-footer">
+            <div class="icon">
+            <div class="icon-first">
+                <span class="wheathericon" id="mainWind"><i class="fa-solid fa-wind"></i></span>
+                <span class="cartTextColor">11 km/h</span>
             </div>
-            <div class="weatherinfo">
-                <form>
-                    <input id="weatherinput" type="text" placeholder="Enter the location..">
-                    <button id="submit" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-                <span id="country"></span>
+            <div class="icon-second">
+                <span  class="wheathericon" id="mainHumidity"><i style="width: 12.8px;" class="fa-brands fa-drupal"></i></span>
+                <span class="cartTextColor">95%</span>
+            </div>
+            <div class="icon-third">
+                <span class="wheathericon" id="mainWind"><i class="fa-sharp fa-solid fa-earth-americas"></i></span>
+                <span class="cartTextColor">Türkiye</span>
             </div>
         </div>
+        <div class="footerTemp">
+            <span class="temp" id="mainTemp">30</span>
+        </div>
+        </div>
+        </div>
     </div>
+    <div class="weatherFlex">
+    <div class="weather-app ">
+        <div class="weather-cart">
+            <div class="cart-header">
+            <span class="cartTextColor cityBorder" id="mainCity">Istanbul</span>
+            <span class="cartTextColor cartClock" id="mainCityClock">10:00</span>
+        </div>
+        <div class="cart-image">
+            <span class="cartImage" id="mainImageIcon"><i class="fa-sharp fa-solid fa-sun"></i></span>
+            <span class="cartImageText" id="mainDesc">Sun</span>
+        </div>
+        <div class="cart-footer">
+            <div class="icon">
+            <div class="icon-first">
+                <span class="wheathericon" id="mainWind"><i class="fa-solid fa-wind"></i></span>
+                <span class="cartTextColor">11 km/h</span>
+            </div>
+            <div class="icon-second">
+                <span  class="wheathericon" id="mainHumidity"><i style="width: 12.8px;" class="fa-brands fa-drupal"></i></span>
+                <span class="cartTextColor">95%</span>
+            </div>
+            <div class="icon-third">
+                <span class="wheathericon" id="mainWind"><i class="fa-sharp fa-solid fa-earth-americas"></i></span>
+                <span class="cartTextColor">Türkiye</span>
+            </div>
+        </div>
+        <div class="footerTemp">
+            <span class="temp" id="mainTemp">30</span>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="weather-app ">
+        <div class="weather-cart">
+            <div class="cart-header">
+            <span class="cartTextColor cityBorder" id="mainCity">Istanbul</span>
+            <span class="cartTextColor cartClock" id="mainCityClock">10:00</span>
+        </div>
+        <div class="cart-image">
+            <span class="cartImage" id="mainImageIcon"><i class="fa-sharp fa-solid fa-sun"></i></span>
+            <span class="cartImageText" id="mainDesc">Sun</span>
+        </div>
+        <div class="cart-footer">
+            <div class="icon">
+            <div class="icon-first">
+                <span class="wheathericon" id="mainWind"><i class="fa-solid fa-wind"></i></span>
+                <span class="cartTextColor">11 km/h</span>
+            </div>
+            <div class="icon-second">
+                <span  class="wheathericon" id="mainHumidity"><i style="width: 12.8px;" class="fa-brands fa-drupal"></i></span>
+                <span class="cartTextColor">95%</span>
+            </div>
+            <div class="icon-third">
+                <span class="wheathericon" id="mainWind"><i class="fa-sharp fa-solid fa-earth-americas"></i></span>
+                <span class="cartTextColor">Türkiye</span>
+            </div>
+        </div>
+        <div class="footerTemp">
+            <span class="temp" id="mainTemp">30</span>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
+
     <script src="./main.js"></script>
 </body>
 </html>
