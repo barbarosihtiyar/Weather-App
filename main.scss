@@ -2,45 +2,95 @@
 
 body{
     font-size: 10px;
+    background-color: $bgcolor;
 }
 
-.weather-app {
-    header {
-        h1 {
-            color: $beige;
+.weather-app{
+    form{
+        text-align: center;
+        margin-top: 2%;
+    }
+    input{
+        outline: none;
+        border-radius: 5%;
+        background: transparent;
+        border: none;
+        color: $textcolor;
+        font-size: 2rem;
+    }
+
+    button{
+        background: transparent;
+        border: none;
+        color: $textcolor;
+        font-size: 1.5rem;
+    }
+    ::placeholder{
+        color: $textcolor;
+    }
+
+    .weather-cart{
+        color: $textcolor;
+        font-size: 0.8rem;
+    }
+
+    .weather-cart{
+        width: 250px;
+        height: 250px;
+        border: 1px solid $bgcolorcart;
+        background-color: $bgcolorcart;
+        border-radius: 5%;
+        margin: 5% auto;
+        .cart-header{
+            margin: 8% 8%;
+            .cityBorder{
+                background-color: $cityborder;
+                padding: 2% 5%;
+                border: 1px solid $cityborder;
+                border-radius:5%;
+            }
+    
+            .cartClock{
+                float: right;
+            }
+            }
+
+        .cart-image{
+            display: flex;
+            flex-direction: column;
             text-align: center;
-            font-size: 3.5rem;
+            margin-bottom: 10%;
+            .cartImage{
+                background-color: transparent;
+                color: #f6a960;
+                font-size: 5rem;
+            }
+            .cartImageText{
+                color: $weatherstate;
+            }
         }
     }
-
-    .weather{
+    .cart-footer{
         display: flex;
-        gap: 5%;
-        .weatherimage{
-            .none{
-                display: none;
+        margin: 0 8%;
+        .icon{
+            margin-right: auto;
+            width: 100%;
+            .cartTextColor{
+                margin-left: 5%;
+            }
+            &-first, &-second, &-third{
+                margin-bottom: 3%;
             }
         }
-
-        .weatherinfo{
-            input{
-                border: none;
-                outline: none;
-                background-color: transparent;
-                color:$white;
-                border-bottom: 1px solid $white;
-                padding-bottom: 2%;
-                font-size: 1.3rem;
-            }
-            button{
-                background-color: transparent;
-                border: none;
-                font-size: 1.3rem;
-            }
-
-            ::placeholder{
-                color: $beige;
-            }
+        .temp{
+            font-size: 2.8rem;
         }
     }
+}
+
+.weatherFlex{
+    display: flex;
+    gap: 5%;
+    justify-content: center;
 }

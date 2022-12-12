@@ -1,39 +1,93 @@
 body {
   font-size: 10px;
+  background-color: #1B1B1B;
 }
 
-.weather-app header h1 {
-  color: #EAE3D2;
+.weather-app form {
   text-align: center;
-  font-size: 3.5rem;
+  margin-top: 2%;
 }
-.weather-app .weather {
+.weather-app input {
+  outline: none;
+  border-radius: 5%;
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+.weather-app button {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+.weather-app ::-moz-placeholder {
+  color: #FFFFFF;
+}
+.weather-app :-ms-input-placeholder {
+  color: #FFFFFF;
+}
+.weather-app ::placeholder {
+  color: #FFFFFF;
+}
+.weather-app .weather-cart {
+  color: #FFFFFF;
+  font-size: 0.8rem;
+}
+.weather-app .weather-cart {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #212021;
+  background-color: #212021;
+  border-radius: 5%;
+  margin: 5% auto;
+}
+.weather-app .weather-cart .cart-header {
+  margin: 8% 8%;
+}
+.weather-app .weather-cart .cart-header .cityBorder {
+  background-color: #3A3939;
+  padding: 2% 5%;
+  border: 1px solid #3A3939;
+  border-radius: 5%;
+}
+.weather-app .weather-cart .cart-header .cartClock {
+  float: right;
+}
+.weather-app .weather-cart .cart-image {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 10%;
+}
+.weather-app .weather-cart .cart-image .cartImage {
+  background-color: transparent;
+  color: #f6a960;
+  font-size: 5rem;
+}
+.weather-app .weather-cart .cart-image .cartImageText {
+  color: #6B6B6B;
+}
+.weather-app .cart-footer {
+  display: flex;
+  margin: 0 8%;
+}
+.weather-app .cart-footer .icon {
+  margin-right: auto;
+  width: 100%;
+}
+.weather-app .cart-footer .icon .cartTextColor {
+  margin-left: 5%;
+}
+.weather-app .cart-footer .icon-first, .weather-app .cart-footer .icon-second, .weather-app .cart-footer .icon-third {
+  margin-bottom: 3%;
+}
+.weather-app .cart-footer .temp {
+  font-size: 2.8rem;
+}
+
+.weatherFlex {
   display: flex;
   gap: 5%;
-}
-.weather-app .weather .weatherimage .none {
-  display: none;
-}
-.weather-app .weather .weatherinfo input {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: #F9F5EB;
-  border-bottom: 1px solid #F9F5EB;
-  padding-bottom: 2%;
-  font-size: 1.3rem;
-}
-.weather-app .weather .weatherinfo button {
-  background-color: transparent;
-  border: none;
-  font-size: 1.3rem;
-}
-.weather-app .weather .weatherinfo ::-moz-placeholder {
-  color: #EAE3D2;
-}
-.weather-app .weather .weatherinfo :-ms-input-placeholder {
-  color: #EAE3D2;
-}
-.weather-app .weather .weatherinfo ::placeholder {
-  color: #EAE3D2;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */
