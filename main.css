@@ -3,6 +3,9 @@ body {
   background-color: #1B1B1B;
 }
 
+.weather-app {
+  margin-bottom: 5%;
+}
 .weather-app form {
   text-align: center;
   margin-top: 2%;
@@ -90,4 +93,5 @@ body {
   display: flex;
   gap: 5%;
   justify-content: center;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=main.css.map */
