@@ -18,7 +18,7 @@
             <input id="weatherinput" placeholder="Enter the location..">
             <button type="submit" id="submit" style="cursor: pointer;"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
-        <div class="weather-cart">
+        <div class="weather-cart hidden" id="weather-cart-hidden">
             <div class="cart-header">
             <span class="cartTextColor cityBorder" id="mainCity"></span>
             <span class="cartTextColor cartClock" id="mainCityClock"></span>
@@ -176,30 +176,30 @@
     <div class="weather-app ">
         <div class="weather-cart">
             <div class="cart-header">
-            <span class="cartTextColor cityBorder" id="cityfiveth">Istanbul</span>
-            <span class="cartTextColor cartClock" id="mainCityClock">10:00</span>
+            <span class="cartTextColor cityBorder" id="cityfiveth"></span>
+            <span class="cartTextColor cartClock" id="fivethCityClock"></span>
         </div>
         <div class="cart-image">
-            <span class="cartImage" id="mainImageIcon"><i class="fa-sharp fa-solid fa-sun"></i></span>
-            <span class="cartImageText" id="mainDesc">Sun</span>
+            <span class="cartImage"><i id="fivethImageIcon" class="fa-sharp fa-solid fa-sun"></i></span>
+            <span class="cartImageText" id="fivethDesc"></span>
         </div>
         <div class="cart-footer">
             <div class="icon">
             <div class="icon-first">
-                <span class="wheathericon" id="mainWind"><i class="fa-solid fa-wind"></i></span>
-                <span class="cartTextColor">11 km/h</span>
+                <span class="wheathericon"><i class="fa-solid fa-wind"></i></span>
+                <span class="cartTextColor" id="fivethWind"></span>
             </div>
             <div class="icon-second">
-                <span  class="wheathericon" id="mainHumidity"><i style="width: 12.8px;" class="fa-brands fa-drupal"></i></span>
-                <span class="cartTextColor">95%</span>
+                <span  class="wheathericon"><i style="width: 12.8px;" class="fa-brands fa-drupal"></i></span>
+                <span class="cartTextColor" id="fivethHumidity"></span>
             </div>
             <div class="icon-third">
-                <span class="wheathericon" id="mainWind"><i class="fa-sharp fa-solid fa-earth-americas"></i></span>
-                <span class="cartTextColor">Türkiye</span>
+                <span class="wheathericon"><i class="fa-sharp fa-solid fa-earth-americas"></i></span>
+                <span class="cartTextColor" id="fivethCountry"></span>
             </div>
         </div>
         <div class="footerTemp">
-            <span class="temp" id="mainTemp">30</span>
+            <span class="temp" id="fivethTemp"></span>
         </div>
         </div>
         </div>
@@ -207,30 +207,30 @@
     <div class="weather-app ">
         <div class="weather-cart">
             <div class="cart-header">
-            <span class="cartTextColor cityBorder" id="citysixth">Istanbul</span>
-            <span class="cartTextColor cartClock" id="mainCityClock">10:00</span>
+            <span class="cartTextColor cityBorder" id="citysixth"></span>
+            <span class="cartTextColor cartClock" id="sixthCityClock"></span>
         </div>
         <div class="cart-image">
-            <span class="cartImage" id="mainImageIcon"><i class="fa-sharp fa-solid fa-sun"></i></span>
-            <span class="cartImageText" id="mainDesc">Sun</span>
+            <span class="cartImage"><i id="sixthImageIcon" class="fa-sharp fa-solid fa-sun"></i></span>
+            <span class="cartImageText" id="sixthDesc"></span>
         </div>
         <div class="cart-footer">
             <div class="icon">
             <div class="icon-first">
-                <span class="wheathericon" id="mainWind"><i class="fa-solid fa-wind"></i></span>
-                <span class="cartTextColor">11 km/h</span>
+                <span class="wheathericon"><i class="fa-solid fa-wind"></i></span>
+                <span class="cartTextColor" id="sixthWind"></span>
             </div>
             <div class="icon-second">
-                <span  class="wheathericon" id="mainHumidity"><i style="width: 12.8px;" class="fa-brands fa-drupal"></i></span>
-                <span class="cartTextColor">95%</span>
+                <span  class="wheathericon"><i style="width: 12.8px;" class="fa-brands fa-drupal"></i></span>
+                <span class="cartTextColor" id="sixthHumidity"></span>
             </div>
             <div class="icon-third">
-                <span class="wheathericon" id="mainWind"><i class="fa-sharp fa-solid fa-earth-americas"></i></span>
-                <span class="cartTextColor">Türkiye</span>
+                <span class="wheathericon"><i class="fa-sharp fa-solid fa-earth-americas"></i></span>
+                <span class="cartTextColor" id="sixthCountry"></span>
             </div>
         </div>
         <div class="footerTemp">
-            <span class="temp" id="mainTemp">30</span>
+            <span class="temp" id="sixthTemp"></span>
         </div>
         </div>
         </div>
@@ -238,30 +238,30 @@
     <div class="weather-app ">
         <div class="weather-cart">
             <div class="cart-header">
-            <span class="cartTextColor cityBorder" id="cityseventh">Istanbul</span>
-            <span class="cartTextColor cartClock" id="mainCityClock">10:00</span>
+            <span class="cartTextColor cityBorder" id="cityseventh"></span>
+            <span class="cartTextColor cartClock" id="seventhCityClock"></span>
         </div>
         <div class="cart-image">
-            <span class="cartImage" id="mainImageIcon"><i class="fa-sharp fa-solid fa-sun"></i></span>
-            <span class="cartImageText" id="mainDesc">Sun</span>
+            <span class="cartImage"><i class="fa-sharp fa-solid fa-sun"></i></span>
+            <span class="cartImageText" id="seventhDesc"></span>
         </div>
         <div class="cart-footer">
             <div class="icon">
             <div class="icon-first">
-                <span class="wheathericon" id="mainWind"><i class="fa-solid fa-wind"></i></span>
-                <span class="cartTextColor">11 km/h</span>
+                <span class="wheathericon"><i id="seventhImageIcon" class="fa-solid fa-wind"></i></span>
+                <span class="cartTextColor" id="seventhWind"></span>
             </div>
             <div class="icon-second">
-                <span  class="wheathericon" id="mainHumidity"><i style="width: 12.8px;" class="fa-brands fa-drupal"></i></span>
-                <span class="cartTextColor">95%</span>
+                <span  class="wheathericon"><i style="width: 12.8px;" class="fa-brands fa-drupal"></i></span>
+                <span class="cartTextColor" id="seventhHumidity"></span>
             </div>
             <div class="icon-third">
-                <span class="wheathericon" id="mainWind"><i class="fa-sharp fa-solid fa-earth-americas"></i></span>
-                <span class="cartTextColor">Türkiye</span>
+                <span class="wheathericon"><i class="fa-sharp fa-solid fa-earth-americas"></i></span>
+                <span class="cartTextColor" id="seventhCountry"></span>
             </div>
         </div>
         <div class="footerTemp">
-            <span class="temp" id="mainTemp">30</span>
+            <span class="temp" id="seventhTemp"></span>
         </div>
         </div>
         </div>
