@@ -95,3 +95,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }/*# sourceMappingURL=main.css.map */
+
+.hidden{
+  visibility: hidden;
+}

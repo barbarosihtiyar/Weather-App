@@ -1,6 +1,8 @@
 let input = document.getElementById('weatherinput')
 const submit = document.getElementById('submit')
+const hiddenCart = document.getElementById("weather-cart-hidden");
 let cityInput = '';
+
 
 let mainCity = document.getElementById("mainCity");
 let mainCityClock = document.getElementById("mainCityClock");
@@ -23,6 +25,7 @@ const options = {
 
 submit.addEventListener('click', (e) => {
   cityInput = input.value
+ 
   e.preventDefault()
 
   fetch(
@@ -79,6 +82,7 @@ submit.addEventListener('click', (e) => {
         mainIcon.classList.remove("fa-cloud");
         mainIcon.classList.add("fa-snowflake");
       }
+      hiddenCart.style.visibility="unset";
     })
     .catch(err => console.error(err))
 
@@ -117,7 +121,8 @@ fetch(
       firstImageIcon.classList.remove("fa-snowflake");
       firstImageIcon.classList.add("fa-sun");
     }else if(data.current.condition.text.includes("Rain") || 
-    data.current.condition.text.includes("Showerss")  )
+    data.current.condition.text.includes("Showerss") || 
+    data.current.condition.text.includes("rain")  )
     {
       firstImageIcon.classList.remove("fa-sun");
       firstImageIcon.classList.remove("fa-cloud");
@@ -185,6 +190,7 @@ fetch(
         secondImageIcon.classList.remove("fa-snowflake");
         secondImageIcon.classList.add("fa-sun");
       }else if(data.current.condition.text.includes("Rain") || 
+    data.current.condition.text.includes("rain")    || 
       data.current.condition.text.includes("Showerss")  )
       {
         secondImageIcon.classList.remove("fa-sun");
@@ -255,7 +261,8 @@ fetch(
           thirdImageIcon.classList.remove("fa-snowflake");
           thirdImageIcon.classList.add("fa-sun");
         }else if(data.current.condition.text.includes("Rain") || 
-        data.current.condition.text.includes("Showerss")  )
+        data.current.condition.text.includes("Showerss") || 
+        data.current.condition.text.includes("rain")  )
         {
           thirdImageIcon.classList.remove("fa-sun");
           thirdImageIcon.classList.remove("fa-cloud");
@@ -326,7 +333,8 @@ fetch(
             fourthImageIcon.classList.remove("fa-snowflake");
             fourthImageIcon.classList.add("fa-sun");
           }else if(data.current.condition.text.includes("Rain") || 
-          data.current.condition.text.includes("Showerss")  )
+          data.current.condition.text.includes("Showerss") || 
+          data.current.condition.text.includes("rain") )
           {
             fourthImageIcon.classList.remove("fa-sun");
             fourthImageIcon.classList.remove("fa-cloud");
@@ -360,4 +368,218 @@ fetch(
           }
         })
         .catch(err => console.error(err))
+  
+
+
+        let cityfiveth = document.getElementById("cityfiveth");
+        let fivethCityClock = document.getElementById("fivethCityClock");
+        let fivethDesc = document.getElementById("fivethDesc");
+        let fivethImageIcon = document.getElementById("fivethImageIcon");
+        let fivethWind = document.getElementById("fivethWind");
+        let fivethHumidity = document.getElementById("fivethHumidity");
+        let fivethTemp = document.getElementById("fivethTemp");
+        let fivethCountry = document.getElementById("fivethCountry");
+        
+      
+        fetch(
+          `https://weatherapi-com.p.rapidapi.com/current.json?q=Madrid`,
+          options
+        )
+          .then(response => response.json())
+          .then(data => {
+            console.log(data)
+            cityfiveth.innerText=`${data.location.name}`
+            fivethCityClock.innerText=`${data.location.localtime}`
+            fivethDesc.innerText=`${data.current.condition.text}`
+            // mainIcon.innerText=`${data.current.condition.icon}`
+            fivethWind.innerText=`${data.current.wind_mph} km/h`
+            fivethHumidity.innerText=`${data.current.humidity}%`
+            fivethTemp.innerText=`${data.current.temp_c}°`
+            fivethCountry.innerText=`${data.location.country}`
+            if(data.current.condition.text.includes("Sunny") || 
+            data.current.condition.text.includes("Clear") || 
+            data.current.condition.text.includes("Sun") ){
+              fivethImageIcon.classList.remove("fa-cloud-rain");
+              fivethImageIcon.classList.remove("fa-cloud");
+              fivethImageIcon.classList.remove("fa-snowflake");
+              fivethImageIcon.classList.add("fa-sun");
+            }else if(data.current.condition.text.includes("Rain") || 
+            data.current.condition.text.includes("Showerss") || 
+            data.current.condition.text.includes("rain")  )
+            {
+              fivethImageIcon.classList.remove("fa-sun");
+              fivethImageIcon.classList.remove("fa-cloud");
+              fivethImageIcon.classList.remove("fa-snowflake");
+              fivethImageIcon.classList.add("fa-cloud-rain");
+            }else if(data.current.condition.text.includes("Fog") || 
+            data.current.condition.text.includes("Thunderstorm") ||
+            data.current.condition.text.includes("Storm") ||
+            data.current.condition.text.includes("Overcast") ||
+            data.current.condition.text.includes("Cloudy") ||
+            data.current.condition.text.includes("cloudy") ||
+            data.current.condition.text.includes("Mist") ||
+            data.current.condition.text.includes("Haze")
+              ){
+                fivethImageIcon.classList.remove("fa-cloud-rain");
+                fivethImageIcon.classList.remove("fa-sun");
+                fivethImageIcon.classList.remove("fa-snowflake");  
+                fivethImageIcon.classList.add("fa-cloud");
+            }else if(data.current.condition.text.includes("Icy") ||
+            data.current.condition.text.includes("Snow") ||
+            data.current.condition.text.includes("snow") ||
+            data.current.condition.text.includes("Showers") ||
+            data.current.condition.text.includes("Chance") ||
+            data.current.condition.text.includes("Sleet") ||
+            data.current.condition.text.includes("Freezing") 
+            ){
+              fivethImageIcon.classList.remove("fa-cloud-rain");
+              fivethImageIcon.classList.remove("fa-sun");
+              fivethImageIcon.classList.remove("fa-cloud");
+              fivethImageIcon.classList.add("fa-snowflake");
+            }
+          })
+          .catch(err => console.error(err))
+    
+
+          let citysixth = document.getElementById("citysixth");
+          let sixthCityClock = document.getElementById("sixthCityClock");
+          let sixthDesc = document.getElementById("sixthDesc");
+          let sixthImageIcon = document.getElementById("sixthImageIcon");
+          let sixthWind = document.getElementById("sixthWind");
+          let sixthHumidity = document.getElementById("sixthHumidity");
+          let sixthTemp = document.getElementById("sixthTemp");
+          let sixthCountry = document.getElementById("sixthCountry");
+          
+        
+          fetch(
+            `https://weatherapi-com.p.rapidapi.com/current.json?q=Amsterdam`,
+            options
+          )
+            .then(response => response.json())
+            .then(data => {
+              console.log(data)
+              citysixth.innerText=`${data.location.name}`
+              sixthCityClock.innerText=`${data.location.localtime}`
+              sixthDesc.innerText=`${data.current.condition.text}`
+              // mainIcon.innerText=`${data.current.condition.icon}`
+              sixthWind.innerText=`${data.current.wind_mph} km/h`
+              sixthHumidity.innerText=`${data.current.humidity}%`
+              sixthTemp.innerText=`${data.current.temp_c}°`
+              sixthCountry.innerText=`${data.location.country}`
+              if(data.current.condition.text.includes("Sunny") || 
+              data.current.condition.text.includes("Clear") || 
+              data.current.condition.text.includes("Sun") ){
+                sixthImageIcon.classList.remove("fa-cloud-rain");
+                sixthImageIcon.classList.remove("fa-cloud");
+                sixthImageIcon.classList.remove("fa-snowflake");
+                sixthImageIcon.classList.add("fa-sun");
+              }else if(data.current.condition.text.includes("Rain") || 
+              data.current.condition.text.includes("Showerss") || 
+              data.current.condition.text.includes("rain")  )
+              {
+                sixthImageIcon.classList.remove("fa-sun");
+                sixthImageIcon.classList.remove("fa-cloud");
+                sixthImageIcon.classList.remove("fa-snowflake");
+                sixthImageIcon.classList.add("fa-cloud-rain");
+              }else if(data.current.condition.text.includes("Fog") || 
+              data.current.condition.text.includes("Thunderstorm") ||
+              data.current.condition.text.includes("Storm") ||
+              data.current.condition.text.includes("Overcast") ||
+              data.current.condition.text.includes("Cloudy") ||
+              data.current.condition.text.includes("cloudy") ||
+              data.current.condition.text.includes("Mist") ||
+              data.current.condition.text.includes("Haze")
+                ){
+                  sixthImageIcon.classList.remove("fa-cloud-rain");
+                  sixthImageIcon.classList.remove("fa-sun");
+                  sixthImageIcon.classList.remove("fa-snowflake");  
+                  sixthImageIcon.classList.add("fa-cloud");
+              }else if(data.current.condition.text.includes("Icy") ||
+              data.current.condition.text.includes("Snow") ||
+              data.current.condition.text.includes("snow") ||
+              data.current.condition.text.includes("Showers") ||
+              data.current.condition.text.includes("Chance") ||
+              data.current.condition.text.includes("Sleet") ||
+              data.current.condition.text.includes("Freezing") 
+              ){
+                sixthImageIcon.classList.remove("fa-cloud-rain");
+                sixthImageIcon.classList.remove("fa-sun");
+                sixthImageIcon.classList.remove("fa-cloud");
+                sixthImageIcon.classList.add("fa-snowflake");
+              }
+            })
+            .catch(err => console.error(err))
+      
+
+
+          
+          
+            let cityseventh = document.getElementById("cityseventh");
+            let seventhCityClock = document.getElementById("seventhCityClock");
+            let seventhDesc = document.getElementById("seventhDesc");
+            let seventhImageIcon = document.getElementById("seventhImageIcon");
+            let seventhWind = document.getElementById("seventhWind");
+            let seventhHumidity = document.getElementById("seventhHumidity");
+            let seventhTemp = document.getElementById("seventhTemp");
+            let seventhCountry = document.getElementById("seventhCountry");
+            
+          
+            fetch(
+              `https://weatherapi-com.p.rapidapi.com/current.json?q=Amsterdam`,
+              options
+            )
+              .then(response => response.json())
+              .then(data => {
+                console.log(data)
+                cityseventh.innerText=`${data.location.name}`
+                seventhCityClock.innerText=`${data.location.localtime}`
+                seventhDesc.innerText=`${data.current.condition.text}`
+                // mainIcon.innerText=`${data.current.condition.icon}`
+                seventhWind.innerText=`${data.current.wind_mph} km/h`
+                seventhHumidity.innerText=`${data.current.humidity}%`
+                seventhTemp.innerText=`${data.current.temp_c}°`
+                seventhCountry.innerText=`${data.location.country}`
+                if(data.current.condition.text.includes("Sunny") || 
+                data.current.condition.text.includes("Clear") || 
+                data.current.condition.text.includes("Sun") ){
+                  seventhImageIcon.classList.remove("fa-cloud-rain");
+                  seventhImageIcon.classList.remove("fa-cloud");
+                  seventhImageIcon.classList.remove("fa-snowflake");
+                  seventhImageIcon.classList.add("fa-sun");
+                }else if(data.current.condition.text.includes("Rain") || 
+                data.current.condition.text.includes("Showerss") || 
+                data.current.condition.text.includes("rain")  )
+                {
+                  seventhImageIcon.classList.remove("fa-sun");
+                  seventhImageIcon.classList.remove("fa-cloud");
+                  seventhImageIcon.classList.remove("fa-snowflake");
+                  seventhImageIcon.classList.add("fa-cloud-rain");
+                }else if(data.current.condition.text.includes("Fog") || 
+                data.current.condition.text.includes("Thunderstorm") ||
+                data.current.condition.text.includes("Storm") ||
+                data.current.condition.text.includes("Overcast") ||
+                data.current.condition.text.includes("Cloudy") ||
+                data.current.condition.text.includes("cloudy") ||
+                data.current.condition.text.includes("Mist") ||
+                data.current.condition.text.includes("Haze")
+                  ){
+                    seventhImageIcon.classList.remove("fa-cloud-rain");
+                    seventhImageIcon.classList.remove("fa-sun");
+                    seventhImageIcon.classList.remove("fa-snowflake");  
+                    seventhImageIcon.classList.add("fa-cloud");
+                }else if(data.current.condition.text.includes("Icy") ||
+                data.current.condition.text.includes("Snow") ||
+                data.current.condition.text.includes("snow") ||
+                data.current.condition.text.includes("Showers") ||
+                data.current.condition.text.includes("Chance") ||
+                data.current.condition.text.includes("Sleet") ||
+                data.current.condition.text.includes("Freezing") 
+                ){
+                  seventhImageIcon.classList.remove("fa-cloud-rain");
+                  seventhImageIcon.classList.remove("fa-sun");
+                  seventhImageIcon.classList.remove("fa-cloud");
+                  seventhImageIcon.classList.add("fa-snowflake");
+                }
+              })
+              .catch(err => console.error(err))
   
